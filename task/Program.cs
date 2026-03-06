@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using task;
+using task.Options;
 using task.Persistence.Common;
 
 var builder = Host.CreateApplicationBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddDbContext<DellinDictionaryDbContext>(options =>
 
 // Регистрация сервисов
 builder.Services.AddHostedService<Worker>();
+
+// Конфигурация пути к файлу
+builder.Services.Configure<FileSettings>(builder.Configuration.GetSection("FileSettings"));
 
 var host = builder.Build();
 host.Run();
