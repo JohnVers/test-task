@@ -2,6 +2,8 @@
 
 public class FileSettings
 {
+    public const string Section = "FileSettings";
+    
     /// <summary>
     /// Путь к файлу
     /// </summary>

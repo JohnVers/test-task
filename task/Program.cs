@@ -4,14 +4,13 @@ using task.Extensions;
 
 var builder = Host.CreateApplicationBuilder(args);
 
+// Конфигурация настроек
+builder.Services.ConfigureOptions(builder.Configuration);
+
 // Регистрация DbContext
 builder.Services.AddDbContext(builder.Configuration.GetConnectionString("DefaultConnection"));
 
-// Регистрация сервисов
-builder.Services.AddHostedService<Worker>();
-
-// Конфигурация настроек
-builder.Services.ConfigureOptions(builder.Configuration);
+builder.Services.ConfigureJobs();
 
 var host = builder.Build();
 host.Run();
