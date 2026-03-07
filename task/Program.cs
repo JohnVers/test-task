@@ -1,5 +1,5 @@
+using Application.Extensions;
 using Persistence.Extensions;
-using task;
 using task.Extensions;
 
 var builder = Host.CreateApplicationBuilder(args);
@@ -9,6 +9,9 @@ builder.Services.ConfigureOptions(builder.Configuration);
 
 // Регистрация DbContext
 builder.Services.AddDbContext(builder.Configuration.GetConnectionString("DefaultConnection"));
+
+// Регистрация слоя приложения
+builder.Services.AddApplication();
 
 builder.Services.ConfigureJobs();
 

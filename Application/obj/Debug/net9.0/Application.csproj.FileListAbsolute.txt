@@ -14,3 +14,5 @@ D:\Projects\CartCountry\test-task\Application\obj\Debug\net9.0\Application.dll
 D:\Projects\CartCountry\test-task\Application\obj\Debug\net9.0\refint\Application.dll
 D:\Projects\CartCountry\test-task\Application\obj\Debug\net9.0\Application.pdb
 D:\Projects\CartCountry\test-task\Application\obj\Debug\net9.0\ref\Application.dll
+D:\Projects\CartCountry\test-task\Application\bin\Debug\net9.0\Persistence.dll
+D:\Projects\CartCountry\test-task\Application\bin\Debug\net9.0\Persistence.pdb

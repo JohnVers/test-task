@@ -47,7 +47,7 @@ public class Terminal
     public bool GiveoutCargo { get; set; }
 
     [JsonPropertyName("maps")]
-    public object? Maps { get; set; } // Можно использовать JsonElement, но для простоты object
+    public object? Maps { get; set; }
 
     [JsonPropertyName("default")]
     public bool Default { get; set; }
@@ -84,8 +84,4 @@ public class Terminal
 
     [JsonPropertyName("worktables")]
     public Worktables? Worktables { get; set; }
-
-    // Собирает все неописанные поля (например, maps, если не хотим описывать отдельно)
-    [JsonExtensionData]
-    public Dictionary<string, object>? ExtensionData { get; set; }
 }
