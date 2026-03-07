@@ -10,7 +10,7 @@ builder.Services.AddDbContext(builder.Configuration.GetConnectionString("Default
 // Регистрация сервисов
 builder.Services.AddHostedService<Worker>();
 
-// Конфигурация пути к файлу
+// Конфигурация настроек
 builder.Services.ConfigureOptions(builder.Configuration);
 
 var host = builder.Build();
