@@ -24,7 +24,10 @@ public static class JobExtensions
                 triggerConfigurator
                     .ForJob(jobKey)
                     .WithIdentity("ImportTerminalsTrigger")
-                    .WithCronSchedule(jobSettings.ImportTerminalsSchedule));
+                    .WithCronSchedule(jobSettings.ImportTerminalsSchedule, builder =>
+                    {
+                        builder.InTimeZone(GetMoscowTimeZone());
+                    }));
         });
 
         serviceCollection.AddQuartzHostedService(options =>
@@ -34,5 +37,22 @@ public static class JobExtensions
         });
 
         return serviceCollection;
+    }
+
+    private static TimeZoneInfo GetMoscowTimeZone()
+    {
+        TimeZoneInfo moscowTimeZone;
+        try
+        {
+            // Пробуем Linux-идентификатор (также работает на macOS)
+            moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Moscow");
+        }
+        catch (TimeZoneNotFoundException)
+        {
+            // Если не найден, пробуем Windows-идентификатор
+            moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+        }
+
+        return moscowTimeZone;
     }
 }
