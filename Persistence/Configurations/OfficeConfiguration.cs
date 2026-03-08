@@ -36,8 +36,7 @@ public class OfficeConfiguration : IEntityTypeConfiguration<Office>
             .OnDelete(DeleteBehavior.Cascade);
 
         // Индексы
-        builder.HasIndex(o => o.Code);
-        builder.HasIndex(o => o.CityCode);
-        builder.HasIndex(o => o.CountryCode);
+        builder.HasIndex(o => o.AddressCity);
+        builder.HasIndex(o => o.AddressStreet);
     }
 }

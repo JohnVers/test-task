@@ -11,7 +11,7 @@ using Persistence.Common;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DellinDictionaryDbContext))]
-    [Migration("20260308041803_InitMigration")]
+    [Migration("20260308091342_InitMigration")]
     partial class InitMigration
     {
         /// <inheritdoc />
@@ -81,11 +81,9 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityCode");
+                    b.HasIndex("AddressCity");
 
-                    b.HasIndex("Code");
-
-                    b.HasIndex("CountryCode");
+                    b.HasIndex("AddressStreet");
 
                     b.ToTable("office", (string)null);
                 });

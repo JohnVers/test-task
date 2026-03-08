@@ -78,11 +78,9 @@ namespace Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CityCode");
+                    b.HasIndex("AddressCity");
 
-                    b.HasIndex("Code");
-
-                    b.HasIndex("CountryCode");
+                    b.HasIndex("AddressStreet");
 
                     b.ToTable("office", (string)null);
                 });

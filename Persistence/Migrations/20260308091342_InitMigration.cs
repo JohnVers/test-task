@@ -61,19 +61,14 @@ namespace Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_office_city_code",
+                name: "IX_office_address_city",
                 table: "office",
-                column: "city_code");
+                column: "address_city");
 
             migrationBuilder.CreateIndex(
-                name: "IX_office_code",
+                name: "IX_office_address_street",
                 table: "office",
-                column: "code");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_office_country_code",
-                table: "office",
-                column: "country_code");
+                column: "address_street");
 
             migrationBuilder.CreateIndex(
                 name: "IX_phone_office_id",
