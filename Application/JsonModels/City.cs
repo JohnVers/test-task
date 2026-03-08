@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using Domain.Entities;
 
 namespace Application.JsonModels;
 
@@ -48,4 +49,20 @@ public class City
 
     [JsonPropertyName("terminals")]
     public TerminalsContainer Terminals { get; set; } = new();
+
+    public IEnumerable<Office> GetTerminals()
+    {
+        var offices = Terminals.Terminals.Select(terminal =>
+        {
+            var office = terminal.CreateEntity();
+
+            office.Id = Convert.ToInt32(Id);
+            office.CountryCode = "RU";
+            office.AddressCity = Name;
+
+            return office;
+        }).ToList();
+        
+        return offices;
+    }
 }

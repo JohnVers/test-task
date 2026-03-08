@@ -1,4 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using Domain.Entities;
+using Domain.Enums;
 
 namespace Application.JsonModels;
 
@@ -84,4 +86,58 @@ public class Terminal
 
     [JsonPropertyName("worktables")]
     public Worktables? Worktables { get; set; }
+
+    public Office CreateEntity()
+    {
+        return new Office()
+        {
+            Id = Convert.ToInt32(Id),
+            Type = DefineType(),
+            Coordinates =  new Coordinates(Latitude, Longitude),
+            AddressStreet = Address,
+            WorkTime = DefineWorkTime(),
+            Phone = DefinePhone()
+        };
+    }
+
+    private OfficeType DefineType()
+    {
+        if (IsPVZ)
+            return OfficeType.PVZ;
+        if (IsOffice)
+            return OfficeType.WAREHOUSE;
+
+        return OfficeType.POSTAMAT;
+    }
+
+    private string DefineWorkTime()
+    {
+        if (CalcSchedule is null) return null;
+
+        if (!string.IsNullOrEmpty(CalcSchedule.Derival))
+            return CalcSchedule.Arrival;
+
+        if (!string.IsNullOrEmpty(CalcSchedule.Arrival))
+            return CalcSchedule.Derival;
+
+        return null;
+    }
+
+    private Domain.Entities.Phone DefinePhone()
+    {
+        if (Phones != null && Phones.Any())
+            return new Domain.Entities.Phone()
+            {
+                PhoneNumber = Phones.First().Number,
+                Additional = Phones.First().Type,
+            };
+
+        if(!string.IsNullOrEmpty(MainPhone))
+            return new Domain.Entities.Phone()
+            {
+                PhoneNumber = MainPhone
+            };
+
+        return null;
+    }
 }
