@@ -5,16 +5,11 @@ using task.Extensions;
 var builder = Host.CreateApplicationBuilder(args)
     .ConfigureLog();
 
-// Конфигурация настроек
-builder.Services.ConfigureOptions(builder.Configuration);
-
-// Регистрация DbContext
-builder.Services.AddDbContext(builder.Configuration.GetConnectionString("DefaultConnection"));
-
-// Регистрация слоя приложения
-builder.Services.AddApplication();
-
-builder.Services.ConfigureJobs();
+builder.Services
+    .ConfigureOptions(builder.Configuration)
+    .AddDbContext(builder.Configuration.GetConnectionString("DefaultConnection"))
+    .AddApplicationLayer()
+    .ConfigureJobs();
 
 var host = builder.Build();
 host.Run();

@@ -6,7 +6,7 @@ using task.Options;
 namespace task.Jobs;
 
 /// <summary>
-/// Работа по импорту терминалов
+/// Задача по импорту терминалов
 /// </summary>
 public class ImportTerminalsJob : IJob
 {

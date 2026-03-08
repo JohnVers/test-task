@@ -6,7 +6,7 @@ namespace Application.Extensions;
 
 public static class ServiceCollectionExtensions
 {
-    public static IServiceCollection AddApplication(this IServiceCollection serviceCollection)
+    public static IServiceCollection AddApplicationLayer(this IServiceCollection serviceCollection)
     {
         serviceCollection.AddScoped<IImportTerminalsService, ImportTerminalsService>();
         
