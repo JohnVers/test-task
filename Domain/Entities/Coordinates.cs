@@ -18,4 +18,9 @@ public class Coordinates
         Latitude = double.Parse(lat, CultureInfo.InvariantCulture);
         Longitude = double.Parse(lon, CultureInfo.InvariantCulture);
     }
+
+    public Coordinates()
+    {
+        
+    }
 }

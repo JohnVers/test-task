@@ -120,7 +120,7 @@ public class Terminal
         if (!string.IsNullOrEmpty(CalcSchedule.Arrival))
             return CalcSchedule.Derival;
 
-        return null;
+        return string.Empty;
     }
 
     private Domain.Entities.Phone DefinePhone()

@@ -1,6 +1,7 @@
-﻿using System.Text.Json;
-using Application.JsonModels;
+﻿using Application.Helpers;
 using Application.Services.ImportTerminalsService.Interfaces;
+using Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Persistence.Common;
 
@@ -10,10 +11,12 @@ namespace Application.Services.ImportTerminalsService;
 public class ImportTerminalsService : IImportTerminalsService
 {
     private readonly ILogger<ImportTerminalsService> _logger;
+    private readonly DellinDictionaryDbContext _dbContext;
 
     public ImportTerminalsService(DellinDictionaryDbContext dbContext,
         ILogger<ImportTerminalsService> logger)
     {
+        _dbContext = dbContext;
         _logger = logger;
     }
 
@@ -21,30 +24,13 @@ public class ImportTerminalsService : IImportTerminalsService
     {
         try
         {
-            if (!File.Exists(filePath))
-            {
-                _logger.LogError("Файл {FilePath} не найден", filePath);
-                return;
-            }
+            var root = TerminalParser.Parse(filePath);
 
-            var jsonFile = await File.ReadAllTextAsync(filePath, cancellationToken);
-            var options = new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
+            var terminals = root.Cities.SelectMany(city => city.GetTerminals());
             
-            var root = JsonSerializer.Deserialize<Root>(jsonFile, options);
+            _logger.LogInformation("Загружено {Count} терминалов из JSON", terminals.Count());
             
-            if (root == null)
-            {
-                _logger.LogWarning("Не удалось десериализовать JSON файл");
-                return;
-            }
-
-            _logger.LogInformation("Загружено {Count} терминалов из JSON", root.Cities.Count);
-
-            
-            await ImportToDatabaseAsync(root.Cities, cancellationToken);
+            await ImportToDatabaseAsync(terminals, cancellationToken);
         }
         catch (Exception ex)
         {
@@ -52,8 +38,25 @@ public class ImportTerminalsService : IImportTerminalsService
         }
     }
     
-    private async Task ImportToDatabaseAsync(IEnumerable<City> cities, CancellationToken cancellationToken)
+    private async Task ImportToDatabaseAsync(IEnumerable<Office> terminals, CancellationToken cancellationToken)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var oldOfficesCount = await _dbContext.Offices.CountAsync(cancellationToken);
+
+            await _dbContext.Offices.ExecuteDeleteAsync(cancellationToken);
+            
+            _logger.LogInformation("Удалено {OldCount} старых записей", oldOfficesCount);
+
+            _dbContext.Offices.AddRange(terminals);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+
+            _logger.LogInformation("Сохранено {NewCount} новых терминалов", terminals.Count());
+        }
+        catch(Exception ex)
+        {
+            _logger.LogError(ex, "Ошибка сохранения данных в БД: {Exception}", ex.Message);
+            throw;
+        }
     }
 }

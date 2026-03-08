@@ -56,7 +56,6 @@ public class City
         {
             var office = terminal.CreateEntity();
 
-            office.Id = Convert.ToInt32(Id);
             office.CountryCode = "RU";
             office.AddressCity = Name;
 
