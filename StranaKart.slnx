@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StranaKart.Assignment.Tests/StranaKart.Assignment.Tests.csproj" />
+  <Project Path="StranaKart.Assignment/StranaKart.Assignment.csproj" />
+</Solution>
