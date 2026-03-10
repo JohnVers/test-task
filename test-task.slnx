@@ -1,3 +1,6 @@
 <Solution>
+  <Project Path="task.Application/task.Application.csproj" Id="6a8adb53-bbb9-4b40-90c5-c1caacd43144" />
+  <Project Path="task.Tests/task.Tests.csproj" Id="1b778854-b362-4283-9e49-5c28503ff65c" />
   <Project Path="task/task.csproj" />
+  <Project Path="test.Core/test.Core.csproj" Id="96118142-c751-4b64-adcd-ff188a5dff20" />
 </Solution>
