@@ -9,10 +9,6 @@ internal sealed class ImportService(IServiceScopeFactory scopeFactory) : IImport
 {
     async Task IImportService.ImportAsync(IList<Office> offices, CancellationToken cancellationToken)
     {
-        // Не ясно что в таком случае делать, просто очистить таблицу или проигнорировать
-        //if (offices.Count() == 0)
-        //    await Task.CompletedTask;
-
         using (var scope = scopeFactory.CreateScope())
         {
             using (var dataContext = scope.ServiceProvider.GetRequiredService<DellinDictionaryDbContext>())
@@ -22,7 +18,5 @@ internal sealed class ImportService(IServiceScopeFactory scopeFactory) : IImport
                 await dataContext.SaveChangesAsync(cancellationToken);
             }
         }
-
-        //await Task.Delay(30 * 1 * 1000, cancellationToken);
     }
 }

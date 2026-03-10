@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using task.Entities;
+﻿using task.Entities;
 
 namespace task.Contract;
 
