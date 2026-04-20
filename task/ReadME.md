@@ -13,7 +13,7 @@
 ### Технический стек
 
 - Язык: C# 13 (.NET 9)
-- Платформа: ASP.NET Core 9 (Hosted Service, без Web API)
+- Платформа: ASP.NET Core 9
 - ORM: Entity Framework Core 9 (PostgreSQL)
 - DI: Microsoft.Extensions.DependencyInjection
 - Логирование: ILogger (структурированные логи)
