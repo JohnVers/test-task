@@ -1,0 +1,22 @@
+name: test-task
+services: 
+  postgres_main:
+    container_name: dellin_dictionary_postgres
+    image: postgres:17-bookworm
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dellin_dictionary
+      POSTGRES_USER: dotnetwebapi
+      POSTGRES_PASSWORD: ${POSTGRES_MAIN_PASSWORD:-postgres}
+    volumes:
+      - main_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dotnetwebapi -d dellin_dictionary -p 5432"]
+      interval: 10s      # Проверять каждые 10 секунд
+      timeout: 5s        # Таймаут команды
+      retries: 5         # 5 неудачных попыток = unhealthy
+    restart: unless-stopped
+
+volumes:
+  main_postgres_data:
