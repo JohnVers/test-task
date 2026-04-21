@@ -1,1 +1,52 @@
-/.DS_Store
+# OS
+.DS_Store
+Thumbs.db
+
+# Visual Studio / VS
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+**/bin/
+**/obj/
+
+# NuGet
+*.nupkg
+*.snupkg
+**/packages/
+project.lock.json
+project.fragment.lock.json
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# VS Code (optional local settings; uncomment if you don't share workspace settings)
+# .vscode/
+
+# User-specific / secrets
+*.pfx
+*.snk
+secrets.json
+**/appsettings.*.local.json
+
+# Test results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Others
+*.cache
+*.log
+*.tmp
+*.temp
+~$*
