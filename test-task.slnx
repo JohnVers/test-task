@@ -1,3 +1,8 @@
 <Solution>
-  <Project Path="task/task.csproj" />
+  <Folder Name="/src/">
+    <Project Path="Domain/task.Domain.csproj" />
+    <Project Path="Application/task.Application.csproj" />
+    <Project Path="Infrastructure/task.Infrastructure.csproj" />
+    <Project Path="Web/task.Web.csproj" />
+  </Folder>
 </Solution>
