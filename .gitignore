@@ -1,1 +1,6 @@
 /.DS_Store
+/.vs
+/task.Tests/bin/Debug/net9.0
+/task.Tests/obj
+/.gitignore
+/.gitignore
