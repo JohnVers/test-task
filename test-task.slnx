@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="task/task.csproj" />
+  <Project Path="../../../../../../../../RR/NextTestCase/Api/Api.csproj" Id="bb691379-a316-4025-b5f6-958fc99d0a3e" />
+  <Project Path="../../../../../../../../RR/NextTestCase/Application/Application.csproj" Id="639b1e5a-f614-4ca1-a480-f51c3116ee27" />
+  <Project Path="../../../../../../../../RR/NextTestCase/Domain/Domain.csproj" Id="26111afd-3874-4637-b6c5-9bdac627c4f6" />
+  <Project Path="../../../../../../../../RR/NextTestCase/Infrastructure/Infrastructure.csproj" Id="b827d8c3-ea8f-485e-bc55-73eceb1ccd6f" />
+  <Project Path="../../../../../../../../RR/NextTestCase/task/task.csproj" />
 </Solution>
