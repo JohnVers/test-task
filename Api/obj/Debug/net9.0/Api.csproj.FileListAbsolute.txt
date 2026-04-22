@@ -1,0 +1,13 @@
+C:\RR\NextTestCase\Api\bin\Debug\net9.0\Api.deps.json
+C:\RR\NextTestCase\Api\bin\Debug\net9.0\Api.dll
+C:\RR\NextTestCase\Api\bin\Debug\net9.0\Api.pdb
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.csproj.AssemblyReference.cache
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.AssemblyInfoInputs.cache
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.AssemblyInfo.cs
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.csproj.CoreCompileInputs.cache
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.sourcelink.json
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.dll
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\refint\Api.dll
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\Api.pdb
+C:\RR\NextTestCase\Api\obj\Debug\net9.0\ref\Api.dll

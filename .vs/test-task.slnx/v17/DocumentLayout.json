@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\RR\\NextTestCase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B827D8C3-EA8F-485E-BC55-73ECEB1CCD6F}|Infrastructure\\Infrastructure.csproj|c:\\rr\\nexttestcase\\infrastructure\\terminalimportbackgroundservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B827D8C3-EA8F-485E-BC55-73ECEB1CCD6F}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\terminalimportbackgroundservice .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA244838-0C40-6381-CBD1-1E7632483B96}|task\\task.csproj|c:\\rr\\nexttestcase\\task\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AA244838-0C40-6381-CBD1-1E7632483B96}|task\\task.csproj|solutionrelative:task\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639B1E5A-F614-4CA1-A480-F51C3116EE27}|Application\\Application.csproj|c:\\rr\\nexttestcase\\application\\usecases\\queries\\searchbycity\\searchbycity.handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639B1E5A-F614-4CA1-A480-F51C3116EE27}|Application\\Application.csproj|solutionrelative:application\\usecases\\queries\\searchbycity\\searchbycity.handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{639B1E5A-F614-4CA1-A480-F51C3116EE27}|Application\\Application.csproj|c:\\rr\\nexttestcase\\application\\dellindictionarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{639B1E5A-F614-4CA1-A480-F51C3116EE27}|Application\\Application.csproj|solutionrelative:application\\dellindictionarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 253,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\RR\\NextTestCase\\task\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "task\\appsettings.Development.json",
+              "ToolTip": "C:\\RR\\NextTestCase\\task\\appsettings.Development.json",
+              "RelativeToolTip": "task\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-04-21T23:53:27.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TerminalImportBackgroundService .cs",
+              "DocumentMoniker": "C:\\RR\\NextTestCase\\Infrastructure\\TerminalImportBackgroundService .cs",
+              "RelativeDocumentMoniker": "Infrastructure\\TerminalImportBackgroundService .cs",
+              "ToolTip": "C:\\RR\\NextTestCase\\Infrastructure\\TerminalImportBackgroundService .cs",
+              "RelativeToolTip": "Infrastructure\\TerminalImportBackgroundService .cs",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAYwJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T23:51:31.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DellinDictionaryDbContext.cs",
+              "DocumentMoniker": "C:\\RR\\NextTestCase\\Application\\DellinDictionaryDbContext.cs",
+              "RelativeDocumentMoniker": "Application\\DellinDictionaryDbContext.cs",
+              "ToolTip": "C:\\RR\\NextTestCase\\Application\\DellinDictionaryDbContext.cs",
+              "RelativeToolTip": "Application\\DellinDictionaryDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T23:44:51.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SearchByCity.handler.cs",
+              "DocumentMoniker": "C:\\RR\\NextTestCase\\Application\\UseCases\\Queries\\SearchByCity\\SearchByCity.handler.cs",
+              "RelativeDocumentMoniker": "Application\\UseCases\\Queries\\SearchByCity\\SearchByCity.handler.cs",
+              "ToolTip": "C:\\RR\\NextTestCase\\Application\\UseCases\\Queries\\SearchByCity\\SearchByCity.handler.cs",
+              "RelativeToolTip": "Application\\UseCases\\Queries\\SearchByCity\\SearchByCity.handler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wCcAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-21T23:37:51.069Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 147,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
