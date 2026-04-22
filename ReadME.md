@@ -148,7 +148,6 @@ public enum OfficeType
 
 1. Опубликовав результат на github и предоставить ссылку на репозиторий
 2. Запаковать проект в zip и отправить
-3. Pull request в проект
 
 - Могу я добавить docker\docker compose?
 
